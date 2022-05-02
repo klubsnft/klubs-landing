@@ -739,6 +739,7 @@ body {
   font-weight: 400;
   font-size: 54px;
   margin-left: 16px;
+  font-family: 'Arthead FREE';
 }
 @media only screen and (max-width: 719px) {
   .home-view > .logo-container > p {
@@ -749,10 +750,11 @@ body {
   margin-top: 40px;
   font-size: 140px;
   color: #FFF200;
+  font-family: 'Arthead FREE';
 }
 @media only screen and (max-width: 719px) {
   .home-view > p {
-    font-size: 64px;
+    font-size: 48px;
   }
 }
 .staking-view > header > section {
