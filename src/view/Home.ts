@@ -9,7 +9,11 @@ export default class Home implements View {
     constructor() {
         Layout.current.title = "Meet Connect Play with";
         Layout.current.content.append(this.container = el(".home-view",
-            el("h1", "Hello klubs"),
+            el(".logo-container",
+                el("img", { src: "/images/shared/logo/klubs.svg", alt: "klubs" }),
+                el("p", "1.0")
+            ),
+            el("p", "Coming Soon!"),
         ));
     }
 

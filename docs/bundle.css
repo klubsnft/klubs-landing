@@ -718,9 +718,42 @@ body {
   background-color: #fff;
 }
 .home-view {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 52px;
+}
+.home-view > .logo-container {
+  display: flex;
+}
+.home-view > .logo-container > img {
+  height: 51px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > .logo-container > img {
+    height: 32px;
+  }
+}
+.home-view > .logo-container > p {
+  font-weight: 400;
+  font-size: 54px;
+  margin-left: 16px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > .logo-container > p {
+    font-size: 32px;
+  }
+}
+.home-view > p {
+  margin-top: 40px;
+  font-size: 140px;
+  color: #FFF200;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > p {
+    font-size: 64px;
+  }
 }
 .staking-view > header > section {
   display: flex;
