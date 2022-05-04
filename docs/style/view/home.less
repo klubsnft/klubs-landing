@@ -3,39 +3,62 @@
     flex-direction : column;
     justify-content: center;
     align-items    : center;
-    margin-top     : 52px;
+    min-height     : 90vh;
 
-    >.logo-container {
-        display: flex;
+    >section {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
 
-        >img {
-            height: 51px;
+        >.logo-container {
+            display: flex;
 
-            @media @phone {
-                height: 32px;
+            >img {
+                height: 51px;
+
+                @media @phone {
+                    height: 32px;
+                }
+            }
+
+            >p {
+                font-weight: 400;
+                font-size  : 54px;
+                margin-left: 16px;
+                font-family: 'Arthead FREE';
+
+                @media @phone {
+                    font-size: 32px;
+                }
             }
         }
 
         >p {
-            font-weight: 400;
-            font-size  : 54px;
-            margin-left: 16px;
+            margin-top : 40px;
+            font-size  : 140px;
+            color      : #FFF200;
             font-family: 'Arthead FREE';
 
             @media @phone {
-                font-size: 32px;
+                font-size: 48px;
             }
         }
-    }
 
-    >p {
-        margin-top : 40px;
-        font-size  : 140px;
-        color      : #FFF200;
-        font-family: 'Arthead FREE';
+        >a {
+            display         : block;
+            margin-top      : 32px;
+            color           : #000;
+            text-decoration : none;
+            padding         : 12px 32px;
+            background-color: #FFF200;
+            border-radius   : 2px;
 
-        @media @phone {
-            font-size: 48px;
+            &:hover {
+                color           : #FFF200;
+                background-color: #000;
+                border          : 1px solid #FFF200;
+            }
         }
     }
 }

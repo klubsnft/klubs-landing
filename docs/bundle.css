@@ -725,40 +725,60 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 52px;
+  min-height: 90vh;
 }
-.home-view > .logo-container {
+.home-view > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-view > section > .logo-container {
   display: flex;
 }
-.home-view > .logo-container > img {
+.home-view > section > .logo-container > img {
   height: 51px;
 }
 @media only screen and (max-width: 719px) {
-  .home-view > .logo-container > img {
+  .home-view > section > .logo-container > img {
     height: 32px;
   }
 }
-.home-view > .logo-container > p {
+.home-view > section > .logo-container > p {
   font-weight: 400;
   font-size: 54px;
   margin-left: 16px;
   font-family: 'Arthead FREE';
 }
 @media only screen and (max-width: 719px) {
-  .home-view > .logo-container > p {
+  .home-view > section > .logo-container > p {
     font-size: 32px;
   }
 }
-.home-view > p {
+.home-view > section > p {
   margin-top: 40px;
   font-size: 140px;
   color: #FFF200;
   font-family: 'Arthead FREE';
 }
 @media only screen and (max-width: 719px) {
-  .home-view > p {
+  .home-view > section > p {
     font-size: 48px;
   }
+}
+.home-view > section > a {
+  display: block;
+  margin-top: 32px;
+  color: #000;
+  text-decoration: none;
+  padding: 12px 32px;
+  background-color: #FFF200;
+  border-radius: 2px;
+}
+.home-view > section > a:hover {
+  color: #FFF200;
+  background-color: #000;
+  border: 1px solid #FFF200;
 }
 .staking-view > header > section {
   display: flex;
