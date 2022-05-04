@@ -1,12 +1,8 @@
 {
     "menu": [
         {
-            "uri": "governance",
-            "key": "GOVERNANCE_MENU"
-        },
-        {
-            "uri": "staking",
-            "key": "STAKING_MENU"
+            "href": "https://v1.klu.bs/",
+            "key": "V1_MENU"
         }
     ]
 }
