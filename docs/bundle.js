@@ -1968,7 +1968,7 @@ eval("/* (ignored) */\n\n//# sourceURL=webpack:///semver_(ignored)?");
 /***/ ((module) => {
 
 "use strict";
-eval("module.exports = {\"menu\":[]};\n\n//# sourceURL=webpack:///./src/component/shared/menu/menu.json?");
+eval("module.exports = JSON.parse('{\"menu\":[{\"href\":\"http://v1.klu.bs/\",\"key\":\"V1_MENU\"}]}');\n\n//# sourceURL=webpack:///./src/component/shared/menu/menu.json?");
 
 /***/ })
 
