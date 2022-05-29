@@ -1,4 +1,4 @@
-import { DomNode, el, Popup } from "skydapp-browser";
+import { DomNode, el, msg, Popup } from "skydapp-browser";
 import Klip from "../../klaytn/Klip";
 
 export default class ConnectWalletPopup extends Popup {
@@ -9,17 +9,17 @@ export default class ConnectWalletPopup extends Popup {
         super(".popup-background");
         this.append(
             this.content = el(".connect-wallet-popup",
-                el("h2", "클레이튼 지갑 연결"),
-                el("p", "Klubs는 클레이튼 블록체인과의 연결이 필요합니다. 카이카스 혹은 카카오톡 클립에서 연결해주시기 바랍니다."),
+                el("h2", msg("CONNECT_WALLET_TITLE")),
+                el("p", msg("CONNECT_WALLET_DESC")),
                 el(".button-container",
-                    el("button.connect-kaikas-button",
+                    el("a.connect-kaikas-button",
                         el("img", { src: "/images/shared/logo/kaikas.svg" }),
-                        "카이카스 설치",
-                        { href: "https://chrome.google.com/webstore/detail/kaikas/jblndlipeogpafnldhgmapagcccfchpi", target: "_blank" },
+                        msg("CONNECT_WALLET_BUTTON1"),
+                        { href: "https://chrome.google.com/webstore/detail/kaikas/jblndlipeogpafnldhgmapagcccfchpi" },
                     ),
-                    el("button.connect-klip-button",
+                    el("a.connect-klip-button",
                         el("img", { src: "/images/shared/logo/klip.svg" }),
-                        "카카오톡 클립으로 연결",
+                        msg("CONNECT_WALLET_BUTTON2"),
                         {
                             click: async () => {
                                 await Klip.connect();
@@ -28,7 +28,7 @@ export default class ConnectWalletPopup extends Popup {
                             },
                         },
                     ),
-                    el("button.button.cancel-button", "연결하지 않고 둘러보기", {
+                    el("a.button.cancel-button", msg("CONNECT_WALLET_BUTTON3"), {
                         click: () => this.delete(),
                     }),
                 ),
