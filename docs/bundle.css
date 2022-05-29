@@ -780,6 +780,53 @@ body {
   background-color: #000;
   border: 1px solid #FFF200;
 }
+.link-wallet-to-discord-view {
+  margin-top: 64px;
+}
+.link-wallet-to-discord-view > header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.link-wallet-to-discord-view > header > h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.link-wallet-to-discord-view > header > h2 {
+  font-size: 0.725rem;
+  padding-top: 8px;
+  color: #e0d8c8;
+  font-weight: 300;
+}
+.link-wallet-to-discord-view > article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 16px;
+}
+.link-wallet-to-discord-view > article > img {
+  max-width: 30%;
+  transform-origin: 50% 50%;
+  margin: 2rem;
+}
+@media only screen and (max-width: 719px) {
+  .link-wallet-to-discord-view > article > img {
+    max-width: 50%;
+  }
+}
+.link-wallet-to-discord-view > article > a {
+  width: 50%;
+  cursor: pointer;
+  padding: 8px 12px 9px;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-bottom: 32px;
+  margin-right: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #FFF200;
+}
 .staking-view > header > section {
   display: flex;
   justify-content: space-between;

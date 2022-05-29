@@ -7,6 +7,7 @@ import Governance from "./view/governance/Governance";
 import GovernanceDetail from "./view/governance/GovernanceDetail";
 import Home from "./view/Home";
 import Layout from "./view/Layout";
+import LinkWalletToDiscord from "./view/LinkWalletToDiscord";
 import MetaverseDetail from "./view/metaverse/MetaverseDetail";
 import MetaversePage from "./view/metaverse/MetaversePage";
 import NFTDetail from "./view/pfp/NFTDetail";
@@ -25,6 +26,7 @@ import Staking from "./view/Staking";
     SkyRouter.route("governance/create", CreateGovernance);
     SkyRouter.route("governance/detail/{id}", GovernanceDetail);
     // SkyRouter.route("governance/{id}/update", CreateGovernance);
+    SkyRouter.route("link-wallet-to-discord", LinkWalletToDiscord);
 
     // Temp Redirect
     SkyRouter.route("pfp/{addr}", PFPPage);
