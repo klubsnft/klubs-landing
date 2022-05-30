@@ -26,7 +26,7 @@ export default class LinkWalletToDiscord implements View {
                     }),
                 ),
             ));
-        // this.checkDiscordLogin();
+        this.checkDiscordLogin();
     }
 
     private async checkDiscordLogin() {
