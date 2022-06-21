@@ -1,0 +1,106 @@
+.proposal-item {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    height         : 80px;
+    padding        : 0 30px;
+    border-bottom  : 1px solid #FFF200;
+
+    @media @phone {
+        flex-direction : column;
+        align-items    : center;
+        justify-content: center;
+    }
+
+    &:hover {
+        background: rgba(255, 242, 0, 0.1);
+    }
+
+    >.subject-container {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        width          : 50%;
+        margin-right   : 32px;
+
+        @media @phone {
+            width        : 100%;
+            margin       : 0px;
+            margin-bottom: 16px;
+        }
+
+        >header {
+            display    : flex;
+            align-items: center;
+
+            >h6 {
+                margin-left: 32px;
+                font-size  : 20px;
+
+                @media @phone {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        >label {
+            justify-content: flex-end;
+            border         : 1px solid #FFF200;
+            color          : #FFF200;
+            padding        : 8px;
+
+            @media @phone {
+                padding: 4px 12px;
+            }
+        }
+
+        >.pass {
+            color       : #00FF00;
+            border-color: #00FF00;
+        }
+
+        >.cancel {
+            color       : #ffffffb3;
+            border-color: #ffffffb3;
+        }
+    }
+
+    >.detail-container {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        width          : 50%;
+
+        @media @phone {
+            width      : 100%;
+            align-items: flex-start;
+            border     : none;
+            font-size  : 12px;
+        }
+
+        >header {
+            display    : flex;
+            align-items: center;
+
+            @media @phone {
+                color      : #ffffffb3;
+                margin-left: 40px;
+            }
+
+            >h6 {
+                margin-left: 32px;
+            }
+        }
+
+        >label {
+            justify-content: flex-end;
+            border         : 1px solid #FFF200;
+            padding        : 8px;
+
+            @media @phone {
+                border : none;
+                padding: 0px;
+            }
+        }
+    }
+}
