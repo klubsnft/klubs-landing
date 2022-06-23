@@ -10,6 +10,7 @@
     "bowser": "^2.11.0",
     "ethers": "^5.6.4",
     "klip-sdk": "^2.0.1",
+    "less": "^4.1.2",
     "skydapp-browser": "^0.0.3",
     "skydapp-common": "^0.0.3",
     "skyutil": "^0.0.12",
