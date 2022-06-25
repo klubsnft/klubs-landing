@@ -4,6 +4,7 @@ import Layout from "../Layout";
 
 export default class PfpAddByOwner implements View {
 
+    private addressInput: DomNode<HTMLInputElement>;
     private container: DomNode;
 
     constructor() {
@@ -16,7 +17,7 @@ export default class PfpAddByOwner implements View {
                 ),
                 el("article",
                     el("h6", "Contract Address"),
-                    el("input", { placeholder: "Input Address" }),
+                    this.addressInput = el("input", { placeholder: "Input Address" }),
                     el(".button-wrap",
                         el("a", "SIGN\nUP"),
                     ),

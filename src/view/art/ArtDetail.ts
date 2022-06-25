@@ -6,6 +6,15 @@ import ViewUtil from "../ViewUtil";
 
 export default class ArtDetail implements View {
 
+    private imageDisplay: DomNode<HTMLImageElement>;
+    private titleDisplay: DomNode;
+    private dateDisplay: DomNode;
+    private priceDisplay: DomNode;
+    private artistDisplay: DomNode;
+    private ownerDisplay: DomNode;
+    private descriptionDisplay: DomNode;
+    private transactionDisplay: DomNode;
+
     private container: DomNode;
 
     constructor() {
@@ -15,17 +24,17 @@ export default class ArtDetail implements View {
                 el("header",
                     el("hr"),
                     el(".img-container",
-                        el("img", { src: "", alt: "test" }),
+                        this.imageDisplay = el("img", { src: "", alt: "test" }),
                     ),
                     el("hr"),
                 ),
                 el("article",
                     el(".title-container",
-                        el("h2", "title"),
+                        this.titleDisplay = el("h2", "title"),
                         el(".info-container",
                             el(".content",
-                                el("span", "Minterd on Apr 6, 2022"),
-                                el("p", "Price : 300"),
+                                this.dateDisplay = el("span", "Minterd on Apr 6, 2022"),
+                                this.priceDisplay = el("p", "Price : 300"),
                             ),
                             el("a", "Collect"),
                         ),
@@ -33,26 +42,38 @@ export default class ArtDetail implements View {
                     el(".caption-container",
                         el(".artist-container",
                             el("h6", "Artist"),
-                            el("p", "Artist"),
+                            this.artistDisplay = el("p", "Artist"),
                         ),
                         el(".owner-container",
                             el("h6", "Owner"),
-                            el("p", "Owner"),
+                            this.ownerDisplay = el("p", "Owner"),
                         ),
                     ),
                     el(".content",
                         el(".description-container",
                             el("h6", "Description"),
-                            el("p", "Description"),
+                            this.descriptionDisplay = el("p", "Description"),
                         ),
                         el(".history-container",
                             el("h6", "Transaction History"),
-                            el("p", "0x33333222ddddd ->  0x33333222ddddd 2022.06.22 111 by 0x8eedx"),
+                            this.transactionDisplay = el("p", "0x33333222ddddd ->  0x33333222ddddd 2022.06.22 111 by 0x8eedx"),
                         ),
                     ),
                 ),
             ),
         ));
+        this.init();
+    }
+
+    private init(): void {
+        this.imageDisplay.empty().append();
+        this.titleDisplay.empty().append();
+        this.dateDisplay.empty().append();
+        this.priceDisplay.empty().append();
+        this.artistDisplay.empty().append();
+        this.ownerDisplay.empty().append();
+        this.descriptionDisplay.empty().append();
+        this.transactionDisplay.empty().append();
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

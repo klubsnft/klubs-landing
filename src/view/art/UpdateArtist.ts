@@ -4,6 +4,14 @@ import Layout from "../Layout";
 
 export default class UpdateArtists implements View {
 
+    private fileInput: DomNode<HTMLInputElement>;
+    private nameInput: DomNode<HTMLInputElement>;
+    private twitterInput: DomNode<HTMLInputElement>;
+    private webInput: DomNode<HTMLInputElement>;
+    private emailInput: DomNode<HTMLInputElement>;
+    private bioInput: DomNode<HTMLInputElement>;
+    private royaltyInput: DomNode<HTMLInputElement>;
+
     private container: DomNode;
 
     constructor() {
@@ -18,27 +26,27 @@ export default class UpdateArtists implements View {
                     el("form",
                         el(".input-container",
                             el("label", "Icon Image"),
-                            el("input", { placeholder: "Click here and upload the image", type: "file" }),
+                            this.fileInput = el("input", { placeholder: "Click here and upload the image", type: "file" }),
                         ),
                         el(".input-container",
                             el("label", "Artist Name"),
-                            el("input", { placeholder: "Write name" }),
+                            this.nameInput = el("input", { placeholder: "Write name" }),
                         ),
                         el(".input-container",
                             el("label", "Twitter Link"),
-                            el("input", { placeholder: "Write twitter" }),
+                            this.twitterInput = el("input", { placeholder: "Write twitter" }),
                         ),
                         el(".input-container",
                             el("label", "Web site"),
-                            el("input", { placeholder: "Write website" }),
+                            this.webInput = el("input", { placeholder: "Write website" }),
                         ),
                         el(".input-container",
                             el("label", "Email"),
-                            el("input", { placeholder: "Write email" }),
+                            this.emailInput = el("input", { placeholder: "Write email" }),
                         ),
                         el(".input-container",
                             el("label", "Bio"),
-                            el("input", { placeholder: "Wrte here maximum 1,000 letters" }),
+                            this.bioInput = el("input", { placeholder: "Wrte here maximum 1,000 letters" }),
                         ),
                     ),
                     el("hr"),
@@ -51,7 +59,7 @@ export default class UpdateArtists implements View {
                             ),
                             el(".input-container",
                                 el("label", "Set Royalty"),
-                                el("input", { placeholder: "Write Royalty" }),
+                                this.royaltyInput = el("input", { placeholder: "Write Royalty" }),
                             ),
                         ),
                     ),

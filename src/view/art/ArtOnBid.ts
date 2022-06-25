@@ -6,6 +6,8 @@ import ViewUtil from "../ViewUtil";
 
 export default class ArtOnBid implements View {
 
+    private artDisplay: DomNode;
+
     private container: DomNode;
 
     constructor() {
@@ -22,11 +24,19 @@ export default class ArtOnBid implements View {
                     ),
                     el("hr"),
                 ),
-                el("article",
-                    new ImageItem("", "title", "@artist ID", "0.0"),
+                this.artDisplay = el("article",
                 ),
             ),
         ));
+        this.init();
+    }
+
+    private init(): void {
+        this.loadProject();
+    }
+
+    private loadProject(): void {
+        this.artDisplay.empty().append(new ImageItem("", "", "title", "@artist ID", "0"));
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

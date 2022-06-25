@@ -2,7 +2,7 @@
     "menu": [
         {
             "key": "MY_NFT_MENU",
-            "uri": "mynft"
+            "uri": "user/my-arts"
         },
         {
             "key": "ART_MENU",

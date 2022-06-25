@@ -7,6 +7,9 @@ import ViewUtil from "../ViewUtil";
 
 export default class PfpProject implements View {
 
+    private nameDisplay: DomNode;
+    private pfpDisplay: DomNode;
+
     private container: DomNode;
 
     constructor() {
@@ -16,7 +19,7 @@ export default class PfpProject implements View {
                 el("header",
                     el(".title-cotnainer",
                         el(".content",
-                            el("h2", "Project name"),
+                            this.nameDisplay = el("h2", "Project name"),
                             el("h3", "BY IDNAME"),
                         ),
                         el(".img-container",
@@ -40,11 +43,20 @@ export default class PfpProject implements View {
                     ),
                     el("hr"),
                 ),
-                el("article",
-                    new ImageItem("", "title", "@artist ID", "0.0"),
+                this.pfpDisplay = el("article",
                 ),
             ),
         ));
+        this.init();
+    }
+
+    private init(): void {
+        this.loadProject();
+    }
+
+    private loadProject(): void {
+        this.nameDisplay.empty().appendText("ProjectName");
+        this.pfpDisplay.empty().append(new ImageItem("", "", "title", "@artist ID", "0.0"));
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

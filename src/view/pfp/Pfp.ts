@@ -5,6 +5,8 @@ import Layout from "../Layout";
 
 export default class Pfp implements View {
 
+    private pfpDisplay: DomNode;
+
     private container: DomNode;
 
     constructor() {
@@ -17,11 +19,19 @@ export default class Pfp implements View {
                         el("h3", "BY IDNAME"),
                     ),
                 ),
-                el("article",
-                    new ProjectItem("", "title", "@artist ID", "WELCOME-TO-THE-REALMSF-EE"),
+                this.pfpDisplay = el("article",
                 ),
             ),
         ));
+        this.init();
+    }
+
+    private init(): void {
+        this.loadProject();
+    }
+
+    private loadProject(): void {
+        this.pfpDisplay.empty().append(new ProjectItem("", "title", "@artist ID", "WELCOME-TO-THE-REALMSF-EE"));
     }
 
     public changeParams(params: ViewParams, uri: string): void { }
