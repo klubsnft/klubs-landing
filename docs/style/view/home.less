@@ -1,0 +1,66 @@
+.home-view {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    min-height     : 90vh;
+
+    >section {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+
+        >.logo-container {
+            display: flex;
+
+            >img {
+                height: 51px;
+
+                @media @phone {
+                    height: 32px;
+                }
+            }
+
+            >p {
+                font-weight: 400;
+                font-size  : 54px;
+                margin-left: 16px;
+                font-family: 'Arthead FREE';
+
+                @media @phone {
+                    font-size: 32px;
+                }
+            }
+        }
+
+        >.kollections {
+            color: #eee;
+    
+            >h1 {
+                font-size    : 30px;
+                margin-bottom: 30px;
+            }
+    
+            >p {
+                line-height: 1.5em;
+            }
+        }
+
+        >a {
+            display         : block;
+            margin-top      : 32px;
+            color           : #000;
+            text-decoration : none;
+            padding         : 12px 32px;
+            background-color: #FFF200;
+            border-radius   : 2px;
+
+            &:hover {
+                color           : #FFF200;
+                background-color: #000;
+                border          : 1px solid #FFF200;
+            }
+        }
+    }
+}

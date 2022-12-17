@@ -1,0 +1,1 @@
+{"version":3,"file":"UpdateGovernance.d.ts","sourceRoot":"","sources":["../../../src/view/Governance/UpdateGovernance.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,MAAM,gBAAgB,CAAC;AAGlD,MAAM,CAAC,OAAO,OAAO,gBAAiB,YAAW,IAAI;IAEjD,OAAO,CAAC,SAAS,CAAU;;IASpB,YAAY,CAAC,MAAM,EAAE,UAAU,EAAE,GAAG,EAAE,MAAM,GAAG,IAAI;IAEnD,KAAK,IAAI,IAAI;CAGvB"}
