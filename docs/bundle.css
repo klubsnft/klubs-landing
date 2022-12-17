@@ -807,16 +807,15 @@ body {
     font-size: 32px;
   }
 }
-.home-view > section > p {
-  margin-top: 40px;
-  font-size: 140px;
-  color: #FFF200;
-  font-family: 'Arthead FREE';
+.home-view > section > .kollections {
+  color: #eee;
 }
-@media only screen and (max-width: 719px) {
-  .home-view > section > p {
-    font-size: 48px;
-  }
+.home-view > section > .kollections > h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.home-view > section > .kollections > p {
+  line-height: 1.5em;
 }
 .home-view > section > a {
   display: block;
